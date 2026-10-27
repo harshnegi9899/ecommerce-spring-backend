@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: Ecommerce
+  profiles:
+    active: dev
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+  expiration: 86400000
+  refresh-expiration: 604800000
+
+
+admin:
+  email: ${ADMIN_EMAIL:admin@example.com}
+  password: ${ADMIN_PASSWORD}
+  firstName: Admin
+  lastName: User
+
+
+stripe:
+  secret-key: ${STRIPE_SECRET_KEY}
+  webhook-secret: ${STRIPE_WEBHOOK_SECRET}
